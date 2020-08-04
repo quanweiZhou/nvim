@@ -8,7 +8,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " theme
-Plug 'morhetz/gruvbox'
+"Plug 'morhetz/gruvbox'
+"Plug 'dracula/dracula-theme'
+"Plug 'dracula/vim', { 'as': 'dracula' }
 
 Plug 'easymotion/vim-easymotion'
 
@@ -30,15 +32,13 @@ call plug#end()
 " colorscheme
 colorscheme gruvbox
 
-" python
-"let g:python_host_prog = '/usr/bin/python' 
-"let g:loaded_python3_provider = 0
 
 "
 " fzf config
 "
 "if dein#tap('fzf.vim')
 nnoremap <silent> <Leader>ag :Ag <C-R><C-w><CR>
+nnoremap <silent> <Leader>rg :Rg <CR>
 nnoremap <silent> <c-p> :Files<CR>
 "endif
 
