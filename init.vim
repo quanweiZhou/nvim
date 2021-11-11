@@ -27,6 +27,9 @@ Plug 'majutsushi/tagbar'
 "comment
 Plug 'joom/vim-commentary'
 
+" git
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 " colorscheme
