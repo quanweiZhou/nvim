@@ -30,7 +30,7 @@ Plug 'joom/vim-commentary'
 call plug#end()
 
 " colorscheme
-colorscheme gruvbox
+" colorscheme gruvbox
 
 
 "
