@@ -1,5 +1,6 @@
 {
 	"rust-analyzer.serverPath": "/usr/local/bin/rust-analyzer",
+	"rust-analyzer.cargo.allFeatures": true,
 	"languageserver": {
 		"golang": {
 			"command": "gopls",
