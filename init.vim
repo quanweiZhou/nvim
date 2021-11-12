@@ -58,6 +58,7 @@ nnoremap <leader>t :TagbarToggle<cr>
 set hidden
 
 set relativenumber
+set number
 
 " Some servers have issues with backup files, see #649.
 set nobackup
