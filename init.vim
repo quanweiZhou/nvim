@@ -8,7 +8,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " theme
-"Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
 "Plug 'dracula/dracula-theme'
 "Plug 'dracula/vim', { 'as': 'dracula' }
 
@@ -33,7 +33,7 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " colorscheme
-" colorscheme gruvbox
+colorscheme gruvbox
 
 
 "
