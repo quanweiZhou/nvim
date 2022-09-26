@@ -18,8 +18,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-" nerdtree
-Plug 'scrooloose/nerdtree'
+" nvim-tree
+Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
+Plug 'kyazdani42/nvim-tree.lua'
 
 " tagbar
 Plug 'majutsushi/tagbar'
@@ -36,6 +37,9 @@ call plug#end()
 colorscheme gruvbox
 
 
+" load lua
+lua require('init')
+
 "
 " fzf config
 "
@@ -45,9 +49,9 @@ nnoremap <silent> <Leader>rg :Rg <CR>
 nnoremap <silent> <c-p> :Files<CR>
 "endif
 
-" nerdtree
-nnoremap <leader>v :NERDTreeFind<cr>
-nnoremap <leader>g :NERDTreeToggle<cr>
+" nvim-tree
+nnoremap <leader>v :NvimTreeFindFile<cr>
+nnoremap <leader>g :NvimTreeToggle<cr>
 
 "tagbar
 nnoremap <leader>t :TagbarToggle<cr>
