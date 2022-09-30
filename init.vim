@@ -37,8 +37,11 @@ call plug#end()
 colorscheme gruvbox
 
 
-" load lua
-lua require('init')
+" init nvim tree
+lua require('init_nvim_tree')
+nnoremap <leader>v :NvimTreeFindFile<cr>
+nnoremap <leader>g :NvimTreeToggle<cr>
+
 
 "
 " fzf config
@@ -48,10 +51,6 @@ nnoremap <silent> <Leader>ag :Ag <C-R><C-w><CR>
 nnoremap <silent> <Leader>rg :Rg <CR>
 nnoremap <silent> <c-p> :Files<CR>
 "endif
-
-" nvim-tree
-nnoremap <leader>v :NvimTreeFindFile<cr>
-nnoremap <leader>g :NvimTreeToggle<cr>
 
 "tagbar
 nnoremap <leader>t :TagbarToggle<cr>
