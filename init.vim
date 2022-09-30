@@ -31,17 +31,22 @@ Plug 'joom/vim-commentary'
 " git
 Plug 'tpope/vim-fugitive'
 
+" neogit
+Plug 'nvim-lua/plenary.nvim'
+Plug 'sindrets/diffview.nvim'
+Plug 'TimUntersberger/neogit'
 call plug#end()
 
 " colorscheme
 colorscheme gruvbox
-
 
 " init nvim tree
 lua require('init_nvim_tree')
 nnoremap <leader>v :NvimTreeFindFile<cr>
 nnoremap <leader>g :NvimTreeToggle<cr>
 
+" init neogit
+lua require('init_neogit')
 
 "
 " fzf config
