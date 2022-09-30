@@ -1,41 +1,5 @@
-call plug#begin('~/.vim/plugged')
-
-" coc.nvim
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" fzf
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
-" theme
-Plug 'morhetz/gruvbox'
-"Plug 'dracula/dracula-theme'
-"Plug 'dracula/vim', { 'as': 'dracula' }
-
-Plug 'easymotion/vim-easymotion'
-
-" airline
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-" nvim-tree
-Plug 'kyazdani42/nvim-web-devicons' " optional, for file icons
-Plug 'kyazdani42/nvim-tree.lua'
-
-" tagbar
-Plug 'majutsushi/tagbar'
-
-"comment
-Plug 'joom/vim-commentary'
-
-" git
-Plug 'tpope/vim-fugitive'
-
-" neogit
-Plug 'nvim-lua/plenary.nvim'
-Plug 'sindrets/diffview.nvim'
-Plug 'TimUntersberger/neogit'
-call plug#end()
+" init package by packer
+lua require('init_pkg_by_packer')
 
 " colorscheme
 colorscheme gruvbox
