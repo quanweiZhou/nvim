@@ -6,7 +6,20 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
-    use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
+    use 'dstein64/vim-startuptime'
+
+    -- TODO
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
+
+    -- lspconfig
+    use 'neovim/nvim-lspconfig'
+    use 'nvim-lua/lsp-status.nvim'
+
+    -- grammar
+    use {
+        "brymer-meneses/grammar-guard.nvim",
+        requires = {"neovim/nvim-lspconfig", "williamboman/nvim-lsp-installer"}
+    }
 
     use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
     use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
@@ -25,6 +38,7 @@ return require('packer').startup(function(use)
     -- use'dracula/dracula-theme'
     -- use'dracula/vim', { 'as': 'dracula' }
 
+    -- easymotion
     use 'easymotion/vim-easymotion'
 
     -- airline
@@ -52,7 +66,26 @@ return require('packer').startup(function(use)
     -- telescope
     use {
         'nvim-telescope/telescope.nvim',
+        tag = '0.1.x',
         requires = {{'nvim-lua/plenary.nvim'}}
     }
+
+    use {
+        'rcarriga/nvim-notify',
+        config = function ()
+          require("notify").setup {
+            stages = 'fade_in_slide_out',
+            background_colour = 'FloatShadow',
+            timeout = 3000,
+          }
+          vim.notify = require('notify')
+        end
+      }
+
+    -- telescope-roject
+    use {'nvim-telescope/telescope-project.nvim'}
+
+    -- document
+    use {'kkoomen/vim-doge', run = ':call doge#install()'}
 
 end)

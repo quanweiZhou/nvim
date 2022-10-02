@@ -7,8 +7,13 @@ lua require('init_nvim_cmp')
 " init nvim lsp
 lua require('init_nvim_lspconfig')
 
+lua require('init_lsp_grammar_guard')
+
 " init telescope
-"lua require('init_telescope')
+lua require('init_telescope')
+
+" init vim notify
+lua require('init_vim_notify')
 
 " colorscheme
 colorscheme gruvbox
