@@ -31,11 +31,17 @@ Plug 'joom/vim-commentary'
 " git
 Plug 'tpope/vim-fugitive'
 
+" docs
+Plug 'kkoomen/vim-doge'
+
 call plug#end()
 
 " colorscheme
 colorscheme gruvbox
 
+" cursor column line
+set cursorcolumn
+set cursorline
 
 " init nvim tree
 lua require('init_nvim_tree')
